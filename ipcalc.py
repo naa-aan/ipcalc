@@ -24,8 +24,9 @@ def calculate_ipv4_subnet_info(ipv4_address_with_prefix):
             "version": 4,
             "Input CIDR": str(network.with_prefixlen),
             "Network Address": str(network.network_address),
+            "Broadcast Address": str(network.broadcast_address),
             "First usable Address": str(network[1]),
-            "Last usable Address":  str(network[-1]),
+            "Last usable Address":  str(network[-2]),
             "Total Addresses": network.num_addresses
         }
 
