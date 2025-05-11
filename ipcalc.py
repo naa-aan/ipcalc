@@ -21,8 +21,8 @@ def calculate_ipv4_subnet_info(ipv4_address_with_prefix):
         network = ipaddress.IPv4Network(ipv4_address_with_prefix, strict=False)
 
         info = {
-            "version": 4,
-            "Input CIDR": str(network.with_prefixlen),
+            "IP Version": 4,
+            "Network (CIDR)": str(network.with_prefixlen),
             "Network Address": str(network.network_address),
             "Broadcast Address": str(network.broadcast_address),
             "First usable Address": str(network[1]),
@@ -65,8 +65,8 @@ def calculate_ipv6_subnet_info(ipv6_address_with_prefix):
         total_addresses = network.num_addresses
 
         info = {
-            "version": 6,
-            "Input CIDR": str(network.with_prefixlen),
+            "IP Version": 6,
+            "Network (CIDR)": str(network.with_prefixlen),
             "Network Address": str(network.network_address),
             "First usable Address": str(network[1]),
             "Last usable Address":  str(network[-1]),
